@@ -76,10 +76,11 @@ public class TareaPooLabo110042019 {
                     IngresarFuncion();
                 break;
                 case 7:System.out.println("----------------------- 7 ----------------------- ");
-                editarFuncion();
+                    editarFuncion();
                 
                 break;
                 case 8:System.out.println("----------------------- 8 ----------------------- ");
+                    cartelera();
                     break;
                 case 9:System.out.println("----------------------- Salir -----------------------"); 
                     flag=false;
@@ -157,7 +158,7 @@ public class TareaPooLabo110042019 {
         System.out.println("            2. Domingo");
         int dia= x.nextInt();
         String Dia=null;
-        System.out.println("numero de la fincion:");
+        System.out.println("numero de la funcion:");
         int num=y.nextInt();
         if (dia==1){
             if(sabadoo.size()>=num){
@@ -186,6 +187,32 @@ public class TareaPooLabo110042019 {
             }
         }
     }
-    
+    public static void cartelera(){
+        System.out.println("*********************************************");
+        System.out.println("------------Funciones del sabado-------------");
+        System.out.println("| Funcion |             Pelicula            |");
+        System.out.println("---------------------------------------------");
+        if(sabadoo.size()==0){
+        System.out.println("                no hay peliculas");
+        }else{for (int i = 0; i < sabadoo.size(); i++) {
+        System.out.println("|    "+sabadoo.get(i).getN_funcion()+"    |         "+sabadoo.get(i).getPelicula());
+            
+        }
+        System.out.println("*********************************************");
+        }
+        System.out.println("");
+        System.out.println("*********************************************");
+        System.out.println("------------Funciones del domingo------------");
+        System.out.println("| Funcion |             Pelicula            |");
+        System.out.println("---------------------------------------------");
+        if(domingoo.size()==0){
+        System.out.println("                no hay peliculas");
+        }else{for (int i = 0; i < domingoo.size(); i++) {
+        System.out.println("|    "+domingoo.get(i).getN_funcion()+"    |         "+domingoo.get(i).getPelicula());
+            
+        }
+            System.out.println("*********************************************");
+        }
+    }
     
 }
