@@ -11,10 +11,10 @@ package tarea.poo.labo1.pkg10042019;
  */
 public class funcion {
     private String Dia;
-    private String N_funcion;
+    private int N_funcion;
     private String Pelicula;
     
-    public funcion(String Dia,String funcion,String pelicula){
+    public funcion(String Dia,int funcion,String pelicula){
         this.Dia=Dia;
         this.N_funcion=funcion;
         this.Pelicula=pelicula;
@@ -28,10 +28,10 @@ public class funcion {
         this.Dia=dia;
     }
     
-    public String getN_funcion(){
+    public int getN_funcion(){
         return N_funcion;
     }
-    public void setN_funcion(String numero){
+    public void setN_funcion(int numero){
         this.N_funcion=numero;
         
     }
@@ -41,6 +41,11 @@ public class funcion {
     }
     public void setPelicula(String nombrePeli){
         this.Pelicula=nombrePeli;        
+    }
+
+    @Override
+    public String toString() {
+        return "funcion{" + "Dia=" + Dia + ", N_funcion=" + N_funcion + ", Pelicula=" + Pelicula + '}';
     }
     
 }
